@@ -1,4 +1,4 @@
 # Minecraft-mix
 <p>
-  <img src="src/mix.png">
+  <img src="src/mixs.PNG">
 </p>
