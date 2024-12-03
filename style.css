@@ -1,26 +1,32 @@
+/* Стили для body */
 body {
+    display: grid; /* Используем сетку для центрирования */
+    place-items: center; /* Центрирование по горизонтали и вертикали */
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Высота страницы */
     color: dark;
     font-family: "Playwrite ES Deco", cursive;
-    background: #2d2f30 url("./bg.png");
+    background: #2d2f30 url("./bg.png") no-repeat center center / cover;
 }
 
+/* Контейнер */
 .container {
     display: grid;
-    position: relative;
+    justify-items: center; /* Центрирование содержимого по горизонтали */
+    align-items: center; /* Центрирование содержимого по вертикали */
     text-align: center;
-    justify-self: end;
-    align-self: center;
+    gap: 20px; /* Расстояние между элементами */
 }
 
+/* Стили для фото */
 #photo {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    margin: 0 auto; /* Центрирование фото */
     height: auto;
     max-width: 500px;
     width: 99%;
-
+    position: relative;
     animation-name: imgAnimation;
     animation-duration: 3s;
     animation-iteration-count: infinite;
@@ -30,15 +36,14 @@ body {
     from {
         transform: scale(1.0);
     }
-
     50% {
         transform: scale(1.05);
     }
-
     to {
         transform: scale(1.0);
     }
 }
+
 @media screen and (max-width: 900px) {
     #imgBanana {
         max-width: 250px;
@@ -46,53 +51,56 @@ body {
     }
 }
 
+/* Вопрос */
 #question {
-    justify-content: center;
-    align-items: center;
-    position: relative;
     font-weight: 800;
     font-size: 24px;
     margin-bottom: 30px;
     color: rgb(255, 255, 255);
 }
 
+/* Кнопка "Да" */
 #yes {
-    margin-left: -100px;
     margin-right: 20px;
     text-align: center;
     font-weight: 800;
     font-size: 20px;
-    padding: 10px 10 10px 10px;
+    padding: 10px;
     border: 1px solid dark;
     background: lightgreen;
     border-radius: 10px;
     width: 100px;
     height: 35px;
     font-family: "Playwrite ES Deco", cursive;
+    cursor: pointer;
 }
 #yes:active {
     filter: brightness(90%);
 }
 
+/* Кнопка "Нет" */
 #no {
-    position: absolute;
     text-align: center;
     font-weight: 800;
     font-size: 20px;
-    padding: 10px 10 10px 10px;
+    padding: 10px;
     border: 1px solid dark;
     background: lightgreen;
     border-radius: 10px;
     width: 100px;
     height: 35px;
     font-family: "Playwrite ES Deco", cursive;
+    cursor: pointer;
+    margin-top: 10px; /* Чтобы было место между кнопками */
 }
 #no:active {
     filter: brightness(90%);
 }
 
+/* Текст после "Да" */
 #yesText {
     text-align: center;
     font-weight: 800;
     font-size: 25px;
+    color: white;
 }
